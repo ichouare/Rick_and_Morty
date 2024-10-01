@@ -10,7 +10,9 @@ module.exports = {
       fontFamily: {
         'poppins': ["Poppins", 'sans-serif'],
         'sans-work': ["Work Sans", 'sans-serif'],
-        "Montserrat": ["Montserrat", 'sans-serif']
+        "Montserrat": ["Montserrat", 'sans-serif'],
+        "Jim": [ "Jim Nightshade", "cursive"],
+        "Inter": [ "Inter"," sans-serif"]
       },
   		borderRadius: {
   			lg: 'var(--radius)',

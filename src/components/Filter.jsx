@@ -37,53 +37,54 @@ const Filter = () => {
     const statusList = [...new Set(categories.map((item) => item.status))];
   return (
     <section className='w-full flex flex-col items-center'>
-         <div className='  min-w-[450px] w-[450px] flex p-2  items-center gap-x-4 bg-white rounded-[32px] shadow-xl'>
-        <input  placeholder='Search...' className='bg-white  shadow-none outline-0 outline-white grow  h-8 px-3  ' value={name} onChange={(e) => setName(e.target.value)} />
+         <div className=' min-w-[450px] w-[450px] h-[60px] flex p-3  items-center gap-x-4 bg-white rounded-[32px] box_shadow'>
+        <input  placeholder='Search...' className='bg-white   shadow-none outline-0 outline-white grow   h-full px-3   ' value={name} onChange={(e) => setName(e.target.value)} />
         <CiSearch  className='text-[24px] cursor-pointer  h-8 w-8 rounded-lg  text-center'/>
         </div>
 
     <div className='w-full grid grid-flow-col  place-items-center font-Montserrat min-h-[261px] '>
-        <div className=''>
+        <div className='w-[308px] h-[80px]  '>
 
         <Select onValueChange={(value) => setGender(value)}>
-        <label htmlFor='gender' className='text-base font-medium leading-5 text-[#333333]'>Gender:</label>
-        <SelectTrigger name='gender' id="gender" className="w-[180px]" >
+        <label htmlFor='gender' className='text-base font-medium leading-5 text-[#333333] mb-2 block'>Gender:</label>
+        <SelectTrigger name='gender' id="gender" className="w-[280px] h-[50px]" >
             <SelectValue placeholder="Select gender" className="capitalize placeholder:capitalize" value={gender}  />
         </SelectTrigger>
         <SelectContent>
            {genderList.map((item)=> {
-            return <SelectItem  value={item} key={item} className='data-[state=checked]:bg-green-500 data-[state=checked]:text-white'>{item}</SelectItem>
+            return <SelectItem  value={item} key={item} className='w-[280px] h-[50px] cursor-pointer data-[state=checked]:bg-green-500 data-[state=checked]:text-white'>{item}</SelectItem>
            }) }
         </SelectContent>
+
         </Select>
         </div>
         <div>
-        <div className=''>
+        <div className='w-[308px] h-[80px] '>
         <Select onValueChange={(value) => setSpecies(value)}>
-        <label htmlFor='gender' className='text-base font-medium leading-5 text-[#333333]'>Species:</label>
-        <SelectTrigger className="w-[180px]">
+        <label htmlFor='gender' className='text-base font-medium leading-5 text-[#333333] mb-2 block '>Species:</label>
+        <SelectTrigger className="w-[280px] h-[50px]">
             <SelectValue placeholder="Select Species" className="capitalize placeholder:capitalize" />
         </SelectTrigger>
         <SelectContent>
         {SpeciesList.map((item)=> {
-            return <SelectItem value={item} key={item} className='data-[state=checked]:bg-green-500 data-[state=checked]:text-white'>{item}</SelectItem>
+            return <SelectItem value={item} key={item} className=' w-[280px] h-[50px] cursor-pointer data-[state=checked]:bg-green-500 data-[state=checked]:text-white'>{item}</SelectItem>
            }) }
         </SelectContent>
         </Select>
         </div>
         </div>
         <div>
-        <div className=''>
+        <div className='w-[308px] h-[80px]'>
    
 
         <Select onValueChange={(value) => setStatus(value)}>
-        <label htmlFor='gender' className='text-base font-medium leading-5 text-[#333333]'>Satus:</label>
-        <SelectTrigger className="w-[180px]">
+        <label htmlFor='gender' className='text-base font-medium leading-5 text-[#333333] mb-2 block'>Satus:</label>
+        <SelectTrigger className="w-[280px] h-[50px]">
             <SelectValue placeholder="Select satus"  className="capitalize placeholder:capitalize" />
         </SelectTrigger>
         <SelectContent>
         {statusList.map((item)=> {
-            return <SelectItem value={item} key={item} className='data-[state=checked]:bg-green-500 data-[state=checked]:text-white' >{item}</SelectItem>
+            return <SelectItem value={item} key={item} className='w-[280px] h-[50px] cursor-pointer data-[state=checked]:bg-green-500 data-[state=checked]:text-white' >{item}</SelectItem>
            }) }
         </SelectContent>
         </Select>

@@ -14,7 +14,7 @@ import {
 const Cart = ({data}) => {
   const {id , name, species, created , image, status, gender} = data
   return (
-    <Card key={id} className='font-poppins cursor-pointer min-w-[392px] w-[392px] h-[608px] max-h-[608px] rounded-[12px] p-2 flex flex-col  '>
+    <Card key={id} className='font-poppins cursor-pointer min-w-[392px] w-[392px] h-[608px] min-h-[608px] rounded-[12px] p-2 flex flex-col  shadow-none '>
     <CardHeader>
         <Avatar className='w-full  min-h-[360px]  rounded-[12px]  '>
       <AvatarImage src={image} />
@@ -28,7 +28,7 @@ const Cart = ({data}) => {
       <CardDescription className='capitalize tracking-wide font-blod text-black '>  Gender : <span className='font-normal text-black/80 ms-3'> {gender} </span></CardDescription>
 </CardContent>
     <CardFooter className='flex'>
-      <Link to={`/${id}`} className="w-fit  p-2  rounded-lg capitalize text-[#017034] bg-[#007C2A33] hover:bg-[#007C2A33] cursor-pointer">details</Link>
+      <Link to={`/${id}`} className="w-[88px] text-center p-2 font-sans-work font-medium text-[14px]  rounded-[6px] capitalize text-[#017034] bg-[#007C2A33] hover:bg-[#007C2A33] cursor-pointer">details</Link>
     </CardFooter>
   </Card>
   )
