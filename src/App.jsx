@@ -2,12 +2,13 @@ import { useState, useEffect, useContext } from 'react'
 import './App.css'
 import axios from 'axios'
 
-import Banner from './components/Banner.jsx'
-import Content from './components/Content.jsx';
-import Filter from './components/Filter.jsx';
-import {Datacontext} from '../Context.js/context.jsx'
-import Paginnation from './components/paginnation.jsx';
 
+import {Datacontext} from '../Context/context.jsx'
+import  Home from './components/pages/Home.jsx'
+import  Details from './components/pages/Detail.jsx'
+import Navbar from './components/Navbar.jsx'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Route , Routes, createRoutesFromElements } from 'react-router';
 
 function App() {
   const {isLoading, setIsLoading, setData, setError, name, gender, species, status, page, setTotal} = useContext(Datacontext)
@@ -15,6 +16,7 @@ function App() {
   useEffect(  () => {
   const fetchData = async () => {
     try{
+      setError('')
       setIsLoading(true)
       const {data} = await axios(
         'https://rickandmortyapi.com/api/character', {
@@ -39,12 +41,19 @@ function App() {
   fetchData()
   }, [name, gender, species, status, page])
 
+  const router = createBrowserRouter(
+    createRoutesFromElements( 
+    <Route path="/" element={<Navbar />} >
+     <Route index  element={<Home />} />
+     <Route path='/:id' element={<Details />} />
+   </Route >
+   )
+   )
+
   return (
-    <main className=' font-sans-work min-w-full min-h-screen h-auto bg-white flex  gap-16 flex-col items-center  text-black  px-8'>
-      <Banner />
-      <Filter/>
-      <Content />
-      <Paginnation/>
+    <main className=' font-sans-work min-w-full min-h-screen h-auto bg-white flex  gap-16 flex-col items-center  text-black'>
+        <RouterProvider router={router} />
+     
       
 
       

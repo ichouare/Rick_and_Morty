@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react'
-import {Datacontext}  from '../../Context.js/context'
+import {Datacontext}  from '../../Context/context'
 import { CiSearch } from "react-icons/ci";
 import axios from 'axios';
 import {

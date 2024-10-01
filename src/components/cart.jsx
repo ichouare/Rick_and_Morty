@@ -8,7 +8,7 @@ import {
     CardTitle,
   } from "./ui/card"
   import { Button } from "@/components/ui/button"
-
+  import {Link, useNavigate, Outlet} from 'react-router-dom'
   import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 
 const Cart = ({data}) => {
@@ -28,7 +28,7 @@ const Cart = ({data}) => {
       <CardDescription className='capitalize tracking-wide font-blod text-black '>  Gender : <span className='font-normal text-black/80 ms-3'> {gender} </span></CardDescription>
 </CardContent>
     <CardFooter className='flex'>
-      <Button className="capitalize text-[#017034] bg-[#007C2A33] hover:bg-[#007C2A33] cursor-pointer">details</Button>
+      <Link to={`/${id}`} className="w-fit  p-2  rounded-lg capitalize text-[#017034] bg-[#007C2A33] hover:bg-[#007C2A33] cursor-pointer">details</Link>
     </CardFooter>
   </Card>
   )

@@ -9,7 +9,7 @@ import {
     PaginationPrevious,
   } from "@/components/ui/pagination"
   import { FaGreaterThan } from "react-icons/fa6";
-  import { Datacontext } from '../../Context.js/context';
+  import { Datacontext } from '../../Context/context';
 
 
 
@@ -36,10 +36,8 @@ const Paginnation = () => {
         </li>
         {
             pages.map((page, index) => (
-                (index ==( pages.length / 2)) ?  <li key={index} className='w-[31.2px] h-[28.6px] grid place-content-center border border-[#017034] rounded-sm' >
-                <li onClick={() => setPage(page)}>
+                (index ==( pages.length / 2)) ?  <li key={index} className='w-[31.2px] h-[28.6px] grid place-content-center border border-[#017034] rounded-sm' onClick={() => setPage(page)}>
                   ...
-                </li>
               </li> : 
               <li key={index} className='w-[31.2px] h-[28.6px] grid place-content-center border border-[#017034] rounded-sm'  >
                 <li onClick={() => setPage(page)}>

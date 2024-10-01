@@ -1,7 +1,7 @@
-import React, {useContext} from 'react'
-import {Datacontext}  from '../../Context.js/context'
+import React, {useContext, useS} from 'react'
+import {Datacontext}  from '../../Context/context'
 import Cart from './cart';
-import Paginnation from './paginnation.jsx';
+
 
 
 
@@ -20,8 +20,8 @@ from the Rick and Morty Multiverse!</h1>
             <div className='text-center'>An error occurred: {error}</div>
           ) : (
             <>
-          {  data.map((character) => (
-                <Cart data={character} />
+          {  data.map((character, _) => (
+                <Cart data={character} key={_} />
             ))}
            
             </>
