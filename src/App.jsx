@@ -55,13 +55,9 @@ function App() {
    )
 
   return (
-    <main className=''>
+    <>
         <RouterProvider router={router} />
-     
-      
-
-      
-    </main>
+    </>
   )
 }
 

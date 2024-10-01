@@ -13,7 +13,7 @@ const Content = () => {
                 <h1 className='text-4xl text-center max-w-[639px]  font-semibold'>Meet the Wildest Characters 
 from the Rick and Morty Multiverse!</h1>
      
-        <section className='w-full min-h-full h-auto flex items-center  gap-8 flex-wrap justify-center xl:justify-start 2xl:justify-center    xl:ps-[60px]  '>
+        <section className='w-full min-h-full h-auto flex items-center  gap-8 flex-wrap justify-center       '>
         {
           isLoading? (
             <div className='text-center w-full 0'><Loading/></div>
