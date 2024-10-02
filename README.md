@@ -52,19 +52,17 @@ git clone https://github.com/ichouare/Rick_and_Morty.git
 Navigate into the project directory:
 
 
-cd rick-morty-app
+cd Rick_and_Morty 
+
 Install dependencies:
-
-
 npm install
+
 Start the development server:
-
-
 npm run dev
+
 Open the application in your browser:
+http://localhost:5173
 
-
-    http://localhost:5173
 Scripts
 npm run dev: Starts the development server.
 npm run build: Builds the app for production.
