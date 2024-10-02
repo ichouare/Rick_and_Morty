@@ -48,7 +48,7 @@ Displays a custom error message for any undefined routes or issues with API requ
 Installation
 Clone the repository:
 
-git clone https://github.com/your-username/rick-morty-app.git
+git clone https://github.com/ichouare/Rick_and_Morty.git
 Navigate into the project directory:
 
 
