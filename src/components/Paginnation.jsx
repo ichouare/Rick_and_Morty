@@ -21,7 +21,7 @@ const Paginnation = () => {
             return ;
         return (
           <div className='w-full p-4 flex items-center justify-center '>
-      <ul className='flex   w-[350px] h-8 items-center justify-center gap-x-2 text-[#212B36] cursor-pointer'> 
+      <ul className='flex  w-full  md:w-[350px] h-8 items-center justify-center gap-x-2 text-[#212B36] cursor-pointer'> 
         <li className={page === 1 ? 'w-[41.6px] h-[41.6px] grid place-content-center border text-[#017034] bg-[#007C2A80] opacity-50 border-[#01703575] rounded-[5.2px]' : 'w-[41.6px] h-[41.6px] grid place-content-center  text-[#017034] border  border-[#017034] rounded-[5.2px]'}  onClick={() => {
     if (page > 1) setPage(page - 1);
 }}>

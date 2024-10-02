@@ -14,11 +14,11 @@ import {
 const Cart = ({data}) => {
   const {id , name, species, created , image, status, gender} = data
   return (
-    <Card key={id} className='font-poppins cursor-pointer min-w-[392px] w-[392px] h-[608px] min-h-[608px] rounded-[12px] p-2 flex flex-col  shadow-none '>
+    <Card key={id} className='font-poppins cursor-pointer w-full md:min-w-[392px] md:w-[392px]  md:h-[608px] md:min-h-[608px] rounded-[12px] md:p-2 flex flex-col  shadow-none  m-0 '>
     <CardHeader>
-        <Avatar className='w-full  min-h-[360px]  rounded-[12px]  '>
+        <Avatar className='w-full min-h-[200px]  md:min-h-[360px]  rounded-[14px]  '>
       <AvatarImage src={image} />
-      <AvatarFallback>CN</AvatarFallback>
+      <AvatarFallback className='w-full min-h-[200px]  md:min-h-[360px]  rounded-[12px] text-black/60 text-3xl'>RM</AvatarFallback>
     </Avatar>
     </CardHeader>
 <CardContent className='flex flex-col gap-1'>

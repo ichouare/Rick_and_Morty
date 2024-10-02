@@ -9,7 +9,7 @@ import Error from './Error.jsx';
 const Content = () => {
     const {data, isLoading, error, name, setName} =  useContext(Datacontext)
   return (
-    <section className='  flex flex-col items-center justify-center gap-16 p-4 '>
+    <section className='  flex flex-col items-center justify-center gap-16 md:p-4 w-full md:max-w-[1616px]   px-4'>
                 <h1 className='text-4xl text-center max-w-[639px]  font-semibold'>Meet the Wildest Characters 
 from the Rick and Morty Multiverse!</h1>
      
