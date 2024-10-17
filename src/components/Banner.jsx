@@ -1,6 +1,6 @@
 import React from 'react'
 
-import BannerImg from '../assets/image.png'
+import BannerImg from '../assets/Image.png';
 const Banner = () => {
   return (
     <section className='w-full h-auto md:min-h-[706px] flex flex-col items-center    overflow-hidden '>
